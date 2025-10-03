@@ -1,0 +1,13 @@
+import java.util.*;
+public class Base64Example{
+	public static void main(String args[])
+	{
+		String Orignal = " Hrello Base64";
+		String encoded = Base64.getEncoder().encodeToString(Orignal.getBytes());
+		System.out.println("Encoded:" + encoded);
+		byte[] decodedBytes = Base64.getDecoder().decode(encoded);
+		String decoded = new String (decodedBytes);
+		System.out.println("decoded:"+ decoded);
+	}
+}
+	
